@@ -3,8 +3,16 @@ import './todolist.css'
 
 class Content extends Component {
     static defaultProps = {
-        content: [],
+        content: '',
     };
+
+    constructor(props){
+        super(props);
+        this.state={
+            value:'',
+        }
+    }
+
 
     handleDeleteContent = () => {
         const {index, onDeleteContent} = this.props;
@@ -13,13 +21,24 @@ class Content extends Component {
         }
     };
 
+    handleEditContent = () => {
+        const {index, onEditContent,content} = this.props;
+        if(onEditContent){
+            onEditContent(index,content);
+        }
+    };
+
     render() {
         const {content} = this.props;
         return (
             <div className='Content'>
-                <div>{content}</div>
-                <span className='Content_del'
-                      onClick={this.handleDeleteContent}>×</span>
+                <div className='Content_left'>{content}</div>
+                <div className='Content_Right'>
+                    <span className='Content_addtion'
+                          onClick={this.handleEditContent}>修改</span>
+                    <span className='Content_addtion'
+                           onClick={this.handleDeleteContent}>删除</span>
+                </div>
             </div>
         )
     }

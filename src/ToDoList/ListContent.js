@@ -5,24 +5,38 @@ import './todolist.css'
 class ListContent extends Component {
 
     onDeleteContent = (index) => {
-        const {onDeleteContent}=this.props;
-        if(onDeleteContent){
+        const {onDeleteContent} = this.props;
+        if (onDeleteContent) {
             onDeleteContent(index);
         }
     };
 
-    render() {
+    onEditContent = (index,value) => {
+        const {onEditContent} = this.props;
+        if (onEditContent) {
+            onEditContent(index,value);
+        }
+    };
+
+    autoContentsList = () => {
         const {contents} = this.props;
+        let arr;
+        arr = contents.map((content, i) => {
+            return (
+                <Content index={i}
+                         key={i}
+                         content={content}
+                         onEditContent={this.onEditContent}
+                         onDeleteContent={this.onDeleteContent}/>
+            )
+        });
+        return arr;
+    };
+
+    render() {
         return (
             <div className='ListContent'>
-                {contents.map((content, i) => {
-                    return (
-                        <Content index={i}
-                                 key={i}
-                                 content={content}
-                                 onDeleteContent={this.onDeleteContent}/>
-                    )
-                })}
+                {this.autoContentsList()}
             </div>
         )
     }
