@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import ListInput from './ListInput';
 import ListContent from './ListContent';
 import ContentDetail from './ContentDetail';
-import './todolist.css'
+import './index.less'
 
 class ToDoList extends Component {
     constructor(props) {

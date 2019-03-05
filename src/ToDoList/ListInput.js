@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './todolist.css'
+import './index.less'
 
 class ListInput extends Component {
     constructor(props) {

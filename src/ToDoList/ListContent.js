@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Content from './Content';
-import './todolist.css'
+import './index.less'
 
 class ListContent extends Component {
 

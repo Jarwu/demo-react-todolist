@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './todolist.css'
+import './index.less'
 
 class Content extends Component {
     static defaultProps = {

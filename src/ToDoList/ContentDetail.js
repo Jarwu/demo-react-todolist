@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import './todolist.css'
+import styles from'./todolist.css'
+import './index.less'
 
 class ContentDetail extends Component {
     constructor(props) {
@@ -38,7 +39,7 @@ class ContentDetail extends Component {
             <div className='ContentDetail'>
                 <div className='ContentDetail_main'>
                     <div className='ContentDetail_header'>
-                        <span className='ContentDetail_title'>编辑</span>
+                        <span className={styles.ContentDetail_title}>编辑</span>
                         <span className='ContentDetail_titleClose' onClick={this.onCancel}>×</span>
                     </div>
                     <div className='ContentDetail_textareaDiv'>

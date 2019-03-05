@@ -1,0 +1,167 @@
+.main {
+  width: 600px;
+  margin: 70px auto;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+  padding: 20px;
+}
+
+.ListInput_main {
+  display: flex;
+  justify-content: center;
+}
+
+.ListInput_button {
+  margin-left: 20px;
+  padding: 5px 10px;
+  width: 80px;
+  border: none;
+  border-radius: 3px;
+  background-color: #00a3cf;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  justify-content: flex-end;
+}
+
+.ListInput_textarea {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  padding: 5px;
+  outline: none;
+  font-size: 14px;
+  resize: none;
+  height: 16px;
+  flex: 1;
+  flex-basis: 500px;
+}
+
+.ListContent {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.Content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.Content_left {
+  width: 85%;
+  word-wrap: break-word;
+}
+
+.Content_Right {
+  justify-content: flex-end;
+}
+
+.Content_addtion {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: transparent;
+}
+
+.Content_addtion:hover {
+  color: grey;
+}
+
+.Content:hover .Content_addtion {
+  color: grey;
+}
+
+.ContentDetail {
+  position: fixed;
+  display: block;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; /* 全宽 */
+  height: 100%; /* 全高 */
+  overflow: auto; /* 允许滚动 */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ContentDetail_main {
+  width: 350px;
+  margin: 10% auto;
+  background-color: #fefefe;
+  padding: 0 10px 10px 10px;
+  border: 1px solid #f1f1f1;
+  border-radius: 7px;
+  animation: topDown 0.4s;
+}
+@keyframes topDown {
+  /*从无到有*/
+  /*from {top: -300px; opacity: 0}*/
+  /*to {top: 0; opacity: 1}*/
+  /*从小到大*/
+  from{transform: scale(0.1)}
+  to{transform:scale(1)}
+}
+
+.ContentDetail_header {
+  display: flex; /*采用flexbox布局*/
+  flex-direction: row; /*水平布局*/
+  align-items: center; /*内容垂直居中*/
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+.ContentDetail_title{
+  color: #aaa;
+  font-size: 16px;
+}
+.ContentDetail_titleClose {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+.ContentDetail_titleClose:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ContentDetail_textarea {
+  height: 100px;
+  width: 300px;
+  resize: none;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  padding: 5px;
+  outline: none;
+  font-size: 14px;
+}
+
+.ContentDetail_save{
+  margin: 10px;
+  padding: 5px 10px;
+  width: 80px;
+  border: none;
+  border-radius: 3px;
+  background-color: #00a3cf;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  justify-content: flex-end;
+}
+
+.ContentDetail_cancel{
+  padding: 5px 10px;
+  width: 80px;
+  border: none;
+  border-radius: 3px;
+  background-color: #aaaaaa;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  justify-content: flex-end;
+}
+
